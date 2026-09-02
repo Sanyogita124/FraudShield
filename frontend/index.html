@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FraudShield — Classic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #f9f8f4;
+        --surface: #ffffff;
+        --surface2: #f2efe9;
+        --border: #e6e2d8;
+        --border-bright: #d1ccbf;
+        --accent: #2c3e50; 
+        --accent-dim: rgba(44,62,80,0.06);
+        --danger: #a94442;
+        --danger-dim: rgba(169,68,66,0.08);
+        --warn: #8a6d3b;
+        --warn-dim: rgba(138,109,59,0.08);
+        --text: #2f2f2f;
+        --text-muted: #737373;
+        --text-dim: #999999;
+        --mono: 'JetBrains Mono', monospace;
+        --sans: 'Inter', sans-serif;
+        --serif: 'Playfair Display', serif;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-up {
+        animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      #root { display: flex; flex-direction: column; min-height: 100vh; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: var(--bg); }
+      ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
